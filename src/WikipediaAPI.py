@@ -26,7 +26,7 @@ def count_unique_letters(text):
 def calculate_average_letter_count():
     total_count = 0
     article_count = 0
-    for title in read_titles('small.txt'):
+    for title in read_titles('../data/small.txt'):
         article = get_article(title)
         if article:
             letter_count = count_unique_letters(article)
