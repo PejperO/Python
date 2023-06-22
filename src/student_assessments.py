@@ -4,7 +4,7 @@ students = {}
 
 
 def load_data():
-    with open('students.txt', 'r') as file:
+    with open('../data/students.txt', 'r') as file:
         for line in file:
             if line.strip():
                 email, name, surname, points, grade, status = line.strip().split(',')
@@ -18,7 +18,7 @@ def load_data():
 
 
 def save_data():
-    with open('students.txt', 'w') as file:
+    with open('../data/students.txt', 'w') as file:
         for email, data in students.items():
             file.write(
                 f"{email},{data['name']},{data['surname']},{data['points']},{data['grade'] or ''},{data['status']}\n")
