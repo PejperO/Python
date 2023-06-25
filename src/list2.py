@@ -13,10 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # Use the rest of the rows as dataframe headers.
 # Attention! See which variable is the explained variable, it will be needed for further tasks.
 
-df = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data", header=None)
-
-df.columns = df.iloc[0]
-df = df[1:]
+df = pd.read_csv('../data/wine.data', header=0)
 
 # Assign column names from df in one line:
 
@@ -77,6 +74,10 @@ for index, row in df.iterrows():
 
 result4 = len(wineList)
 print(result4)
+
+wineList = []
+wynik4 = len(wineList)
+print(wynik4)
 
 # Take the last element from the list and based on
 # repr function result create a new object - eval(repr(object))
